@@ -22,7 +22,6 @@ defmodule HelloPhoenix do
         Sentry.capture_exception(my_exception, [stacktrace: System.stacktrace(), extra: %{extra: "abc"}])
     end
 
-    raise("uncaught exception...this should be caught")
     
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options

@@ -24,7 +24,7 @@ defmodule HelloPhoenix.Router do
 
   scope "/abc", HelloPhoenix do
     pipe_through :browser # Use the default browser stack
-    get "abc", PageController, :abc
+    get "/", PageController, :abc
   end
 
   # Other scopes may use custom stacks.
