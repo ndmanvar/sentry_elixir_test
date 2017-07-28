@@ -6,9 +6,7 @@ defmodule HelloPhoenix.PageController do
   end
 
   def abc(conn, _params) do
-    task = Task.async(fn -> do_some_work() end)
-    res  = do_some_other_work()
-    Task.await(task)
+    task = Task.start(fn -> do_some_work() end)
 
     render conn, "index.html"
 
