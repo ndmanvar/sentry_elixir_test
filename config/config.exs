@@ -31,4 +31,5 @@ config :phoenix, :generators,
 config :sentry, dsn: "https://fcd3dcffe51c410cbed71ab8b6ac69ed:541d5544819f4c2380c597adf0236362@sentry.io/197085",
   included_environments: [:prod, :dev, :test],
   use_error_logger: true,
-  environment_name: Mix.env
+  environment_name: Mix.env,
+  enable_source_code_context: false

@@ -6,14 +6,16 @@ defmodule HelloPhoenix.PageController do
   end
 
   def abc(conn, _params) do
-    task = Task.start(fn -> do_some_work() end)
+    task = Task.start(fn -> do_some_work("start") end)
+    task = Task.async(fn -> do_some_work("async") end)
 
     render conn, "index.html"
 
   end
 
-  defp do_some_work() do
-    raise "abc another error"
+  defp do_some_work(message) do
+    :timer.sleep(1000)
+    raise message
   end
 
   defp do_some_other_work() do
