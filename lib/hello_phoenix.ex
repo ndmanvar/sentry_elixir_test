@@ -6,6 +6,8 @@ defmodule HelloPhoenix do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    :error_logger.add_report_handler(Sentry.Logger)
+    
     children = [
       # Start the endpoint when the application starts
       supervisor(HelloPhoenix.Endpoint, []),

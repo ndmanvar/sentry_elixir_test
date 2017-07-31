@@ -28,7 +28,7 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-config :sentry, dsn: "https://fcd3dcffe51c410cbed71ab8b6ac69ed:541d5544819f4c2380c597adf0236362@sentry.io/197085",
+config :sentry, dsn: "https://SENTRY_PUBLIC_KEY:SENTRY_SECRET_KEY@sentry.io/197085",
   included_environments: [:prod, :dev, :test],
   use_error_logger: true,
   environment_name: Mix.env,
