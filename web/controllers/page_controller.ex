@@ -14,6 +14,7 @@ defmodule HelloPhoenix.PageController do
   end
 
   defp do_some_work(message) do
+    :timer.sleep(1000)
     raise message
   end
 
